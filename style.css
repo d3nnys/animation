@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Chango&display=swap");
+
+body {
+  font-family: "Chango", cursive;
+  text-align: center;
+  background: #000000;
+  color: #ffffff;
+}
+
+.main-text {
+  margin-top: 150px;
+  font-size: 150px;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-image: url(./img/abs.jpg);
+  animation: animate 10s infinite;
+}
+
+@keyframes animate {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 100% 100%;
+  }
+}
