@@ -8,8 +8,27 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- RAINBOW SCROLL -->
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
+    <section>
+      <h1>Creative Scroll Progress Bar</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos laboriosam eum suscipit? Eveniet laboriosam nisi blanditiis minus nesciunt labore dolores animi voluptatum saepe ipsam nulla iusto non nam temporibus quaerat corrupti hic explicabo accusamus laborum, omnis iure doloremque quo dolorum. Aspernatur quas reprehenderit impedit sed porro sint laudantium suscipit fugiat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos laboriosam eum suscipit? Eveniet laboriosam nisi blanditiis minus nesciunt labore dolores animi voluptatum saepe ipsam nulla iusto non nam temporibus quaerat corrupti hic explicabo accusamus laborum, omnis iure doloremque quo dolorum. Aspernatur quas reprehenderit impedit sed porro sint laudantium suscipit fugiat!</p>
+    </section>
+    <!-- CURSOR -->
     <canvas id="canvas"></canvas>
+    <!-- ANIMATE TEXT -->
     <div class="main-text">WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?</div>
+    <!-- RAINBOW SCROLL -->
+    <script type="text/javascript">
+      let progress = document.getElementById('progressbar');
+      let totalHeight = document.body.scrollHeight - window.innerHeight;
+      window.onscroll = function() {
+        let progressHeight = (window.pageYOffset / totalHeight) * 100;
+        progress.style.height = progressHeight + "%";
+      }
+    </script>
+    <!-- CURSOR -->
     <script src="./main.js"></script>
   </body>
 </html>
